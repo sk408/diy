@@ -87,7 +87,7 @@ const uint8_t resolutions_per_format[CFG_TUD_AUDIO_FUNC_1_N_FORMATS] = {CFG_TUD_
 // Current resolution, update on format change
 uint8_t current_resolution;
 
-// Last time a packet was recieved, used to detect when a host stops sending audio
+// Last time a packet was received, used to detect when a host stops sending audio
 static absolute_time_t last_packet_time = 0;
 
 // A counter for the number of consecutive silence audio packets
@@ -246,7 +246,7 @@ static bool tud_audio_feature_unit_get_request(uint8_t rhport, audio_control_req
     TU_LOG1("Get channel %u mute %d\n", request->bChannelNumber, mute1.bCur);
     return tud_audio_buffer_and_schedule_control_xfer(rhport, (tusb_control_request_t const *)request, &mute1, sizeof(mute1));
   }
-  else if (UAC2_ENTITY_SPK_FEATURE_UNIT && request->bControlSelector == AUDIO_FU_CTRL_VOLUME)
+  else if (request->bEntityID == UAC2_ENTITY_SPK_FEATURE_UNIT && request->bControlSelector == AUDIO_FU_CTRL_VOLUME)
   {
     if (request->bRequest == AUDIO_CS_REQ_RANGE)
     {

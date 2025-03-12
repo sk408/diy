@@ -40,7 +40,7 @@ HearingAid ha_2 = {};
 // extern "C" required by multicore_launch_core1
 extern "C" void bt_main();
 
-void usb_main();
+void usb_main(void);
 
 extern "C" int main()
 {

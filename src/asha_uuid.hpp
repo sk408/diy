@@ -34,7 +34,7 @@ constexpr std::array<uint8_t, 16> uuid_from_str(const char uuid_str[37])
     return uuid;
 }
 
-/* UUID's for the ASHA service and it's characteristics */
+/* UUID's for the ASHA service and its characteristics */
 namespace AshaUUID
 {
     // 16 bit ASHA service UUID, little endian

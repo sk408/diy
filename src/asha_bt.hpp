@@ -21,7 +21,7 @@ struct AdvertisingReport {
 
 private:
     /* Check if this advertising report contains the services advertised
-       by hearing aids. It checks for the existance of the ASHA service
+       by hearing aids. It checks for the existence of the ASHA service
        types, as well as the Apple MFI service, because not all hearing 
        aids advertise ASHA (such as Oticon More) */
     void check_if_ha(uint8_t length, const uint8_t * data);

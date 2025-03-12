@@ -10,6 +10,7 @@
 #include "asha_usb_serial.hpp"
 #include "asha_uuid.hpp"
 #include "hearing_aid.hpp"
+#include "runtime_settings.hpp"
 #include "util.hpp"
 
 namespace asha

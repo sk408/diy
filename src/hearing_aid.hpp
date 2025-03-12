@@ -142,7 +142,7 @@ private:
 
         struct {
             gatt_client_service_t service = {};
-            gatt_client_characteristic_t manufacture_name = {};
+            gatt_client_characteristic_t manufacturer_name = {};
             gatt_client_characteristic_t model_num = {};
             gatt_client_characteristic_t fw_vers = {};
         } dis = {};
@@ -186,7 +186,7 @@ private:
     void unset_process_busy();
     void set_audio_busy();
     void unset_audio_busy();
-    void set_data_langth();
+    void set_data_length();
     void send_acp_start();
     void send_acp_stop();
     void send_acp_status(uint8_t status);
